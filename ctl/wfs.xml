@@ -3440,7 +3440,7 @@ Selecting "all" will include all tests.</p>
       <title>Web Feature Service (WFS) 1.0.0</title>
       <description>Validates that a WFS 1.0.0 is compliant.</description>
       <starting-test>wfs:main</starting-test>
-      <ctl:link>data/data-wfs-1.0.0.zip</ctl:link>
+      <!--<ctl:link>data/data-wfs-1.0.0.zip</ctl:link>-->
    </suite>
    <test name="wfs:test1.0.0-basic-describefeaturetype-get-1">
       <param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>
