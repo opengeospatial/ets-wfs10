@@ -18727,7 +18727,7 @@ boolean(/wfs:WFS_Capabilities/wfs:FeatureTypeList/wfs:FeatureType/wfs:Operations
                   <xsl:value-of select="$VAR_WFS_TRANSACTION_HTTP_POST_URL"/>
                </url>
                <method>post</method>
-               <body><![CDATA[ <?xml version="1.0" encoding="UTF-8"?>
+               <body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <wfs:Transaction
   service="WFS"
   version="1.0.0"
@@ -21670,7 +21670,7 @@ boolean(/wfs:WFS_Capabilities/wfs:FeatureTypeList/wfs:FeatureType/wfs:Operations
                   <xsl:value-of select="$VAR_WFS_TRANSACTION_HTTP_POST_URL"/>
                </url>
                <method>post</method>
-               <body><![CDATA[ <?xml version="1.0" encoding="UTF-8"?>
+               <body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <wfs:Transaction
   service="WFS"
   version="1.0.0"
