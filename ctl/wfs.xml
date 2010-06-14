@@ -3667,7 +3667,7 @@ Selecting "all" will include all tests.</p>
                <body><![CDATA[<wfs:DescribeFeatureType
   service="WFS"
   version="1.0.0"
-  outputFormat="XMLSCHEMA" 
+  outputFormat="XMLSCHEMA"
   xmlns:wfs="http://www.opengis.net/wfs"
 >
           </wfs:DescribeFeatureType>]]></body>
@@ -3696,7 +3696,7 @@ Selecting "all" will include all tests.</p>
                <body><![CDATA[<wfs:DescribeFeatureType
   service="WFS"
   version="1.0.0"
-  outputFormat="DUMMYFORMAT" 
+  outputFormat="DUMMYFORMAT"
   xmlns:wfs="http://www.opengis.net/wfs"
 >
           </wfs:DescribeFeatureType>]]></body>
@@ -3725,7 +3725,7 @@ Selecting "all" will include all tests.</p>
                <body><![CDATA[<wfs:DescribeFeatureType
   service="WFS"
   version="1.0.0"
-  outputFormat="XMLSCHEMA" 
+  outputFormat="XMLSCHEMA"
   xmlns:wfs="http://www.opengis.net/wfs"
 >
           </wfs:DescribeFeatureType>]]></body>
@@ -3754,7 +3754,7 @@ Selecting "all" will include all tests.</p>
                <body><![CDATA[<wfs:DescribeFeatureType
   service="WFS"
   version="1.0.0"
-  outputFormat="XMLSCHEMA" 
+  outputFormat="XMLSCHEMA"
   xmlns:cgf="http://www.opengis.net/cite/geometry"
   xmlns:wfs="http://www.opengis.net/wfs"
 >
@@ -3785,7 +3785,7 @@ Selecting "all" will include all tests.</p>
                <body><![CDATA[<wfs:DescribeFeatureType
   service="WFS"
   version="1.0.0"
-  outputFormat="XMLSCHEMA" 
+  outputFormat="XMLSCHEMA"
   xmlns:cgf="http://www.opengis.net/cite/geometry"
   xmlns:wfs="http://www.opengis.net/wfs"
 >
@@ -3817,7 +3817,7 @@ Selecting "all" will include all tests.</p>
                <body><![CDATA[<wfs:DescribeFeatureType
   service="WFS"
   version="1.0.0"
-  outputFormat="XMLSCHEMA" 
+  outputFormat="XMLSCHEMA"
   xmlns:cdf="http://www.opengis.net/cite/data"
   xmlns:cgf="http://www.opengis.net/cite/geometry"
   xmlns:wfs="http://www.opengis.net/wfs"
@@ -3850,7 +3850,7 @@ Selecting "all" will include all tests.</p>
                <body><![CDATA[<wfs:DescribeFeatureType
   service="WFS"
   version="1.0.0"
-  outputFormat="XMLSCHEMA" 
+  outputFormat="XMLSCHEMA"
   xmlns:cgf="http://www.opengis.net/cite/geometry"
   xmlns:wfs="http://www.opengis.net/wfs"
 >
@@ -3881,7 +3881,7 @@ Selecting "all" will include all tests.</p>
                <body><![CDATA[<wfs:DescribeFeatureType
   service="WFS"
   version="1.0.0"
-  outputFormat="XMLSCHEMA" 
+  outputFormat="XMLSCHEMA"
   xmlns:cgf="http://www.opengis.net/cite/geometry"
   xmlns:wfs="http://www.opengis.net/wfs"
 >
@@ -4032,7 +4032,7 @@ and (
   or
   boolean(/wfs:WFS_Capabilities/wfs:Capability/wfs:Request/wfs:GetFeature/wfs:DCPType/wfs:HTTP/wfs:Post)
 )
-				)</xsl:variable>
+                                )</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
                <fail/>
             </xsl:if>
@@ -4280,7 +4280,7 @@ and (
   or
   boolean(/wfs:WFS_Capabilities/wfs:Capability/wfs:Request/wfs:GetFeature/wfs:DCPType/wfs:HTTP/wfs:Post)
 )
-				)</xsl:variable>
+                                )</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
                <fail/>
             </xsl:if>
@@ -16991,7 +16991,7 @@ The first step of a relative location path may correspond to the root element of
         <gml:Polygon>
           <gml:outerBoundaryIs>
             <gml:LinearRing>
-              <gml:coordinates>500225,500025 50025,500050 500275,500025 500225,500025</gml:coordinates>
+              <gml:coordinates>500225,500025 500025,500050 500275,500025 500225,500025</gml:coordinates>
             </gml:LinearRing>
           </gml:outerBoundaryIs>
         </gml:Polygon>
