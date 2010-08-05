@@ -2,6 +2,15 @@ WFS 1.0.0 Test Suite Release Notes
 
 Changes included in this revision:
 
+2010-08-05 (kstegemoller):
+- updated release notes.
+
+2010-07-14 (aschmitz):
+- fixed issue #28
+
+2010-06-14 (aschmitz):
+- fixed issue #492
+
 2010-05-13 (kstegemoller):
 - updated release notes.
 
