@@ -23136,7 +23136,7 @@ count(/wfs:WFS_LockFeatureResponse/wfs:FeaturesNotLocked/ogc:FeatureId) = 0)</xs
             </xsl:if>
          </xsl:for-each>
          <xsl:for-each select="$request4">
-            <xsl:variable name="expression">not(boolean(/wfs:WFS_TransactionResponse/wfs:TransactionResult/wfs:Status/wfs:FAILED))</xsl:variable>
+            <xsl:variable name="expression">not(boolean(/ogc:ServiceExceptionReport) or boolean(/wfs:WFS_TransactionResponse/wfs:TransactionResult/wfs:Status/wfs:FAILED))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
                <fail/>
             </xsl:if>
