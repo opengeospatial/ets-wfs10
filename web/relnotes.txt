@@ -2,8 +2,16 @@ WFS 1.0.0 Test Suite Release Notes
 
 Changes included in this revision:
 
+2010-09-10 (kstegemoller):
+- updated release notes.
+
+2010-09-06 (aschmitz):
+- another fix related to #552 (for LockFeature)
+- fixed issue #552 as proposed in issue description
+
 2010-08-05 (kstegemoller):
 - updated release notes.
+- tag r3 - WFS 1.0.0
 
 2010-07-14 (aschmitz):
 - fixed issue #28
@@ -12,6 +20,7 @@ Changes included in this revision:
 - fixed issue #492
 
 2010-05-13 (kstegemoller):
+- production release of WFS 1.0.0 R2
 - updated release notes.
 
 2010-05-09 (jdeoliveira1):
