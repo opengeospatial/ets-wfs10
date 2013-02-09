@@ -1,5 +1,10 @@
 WFS 1.0.0 Test Suite Release Notes
 
+Changes in r5 (2013-02-08)
+--------------------------
+- Updated config.xml for TEAM-Engine v4.
+- Fixed links in ctl:form.
+
 === Changes included in R4 ===
 - updated description of the test (index.html), linked to executive summary (execsummary.html) and test requirements (testreq.html)
 
