@@ -5,7 +5,7 @@
   <standard>
     <name>Web Feature Service (WFS)</name>
     <version>
-      <name>1.0.0 (deprecated)</name>
+      <name>1.0.0</name>
       <suite>
         <namespace-uri>http://www.opengis.net/wfs</namespace-uri>
         <prefix>wfs</prefix>

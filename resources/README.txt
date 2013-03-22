@@ -1,5 +1,5 @@
 
-The WFS 1.0.0 test suite requires the supporting libraries llisted below. 
+The WFS 1.0.0 test suite requires the supporting libraries listed below. 
 Put them in the application lib directory (teamengine/WEB-INF/lib/).
 
 - cite1-utils-1.0.1.jar
