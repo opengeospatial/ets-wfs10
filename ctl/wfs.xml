@@ -51,23 +51,23 @@
                </parm>
                <parm>
                   <name>http://www.galdosinc.com/xml/properties/schemaLocation</name>
-                  <value>http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/schemas/OGC-1.0.0/OGC_Wrapper.xsd</value>
+                  <value>schemas/OGC-1.0.0/OGC_Wrapper.xsd</value>
                </parm>
                <parm>
                   <name>http://www.galdosinc.com/xml/properties/schemaLocation</name>
-                  <value>http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/schemas/WFS-1.0.0/WFS_Wrapper.xsd</value>
+                  <value>schemas/WFS-1.0.0/WFS_Wrapper.xsd</value>
                </parm>
                <parm>
                   <name>http://www.galdosinc.com/xml/properties/schemaLocation</name>
-                  <value>http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/schemas/complexFeatures.xsd</value>
+                  <value>schemas/complexFeatures.xsd</value>
                </parm>
                <parm>
                   <name>http://www.galdosinc.com/xml/properties/schemaLocation</name>
-                  <value>http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/schemas/dataFeatures.xsd</value>
+                  <value>schemas/dataFeatures.xsd</value>
                </parm>
                <parm>
                   <name>http://www.galdosinc.com/xml/properties/schemaLocation</name>
-                  <value>http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/schemas/geometryFeatures.xsd</value>
+                  <value>schemas/geometryFeatures.xsd</value>
                </parm>
             </documentlocations>
          </with-param>
@@ -3415,7 +3415,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3441,7 +3442,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3467,7 +3469,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/ogc:ServiceExceptionReport))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3492,7 +3495,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema, 'cdf:Deletes', 'cgf:Points'))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3518,7 +3522,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema, 'cgf:Points'))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3544,7 +3549,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema, 'cgf:Points', 'cgf:Lines'))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3570,7 +3576,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema, 'cgf:Points', 'cdf:Other'))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3596,7 +3603,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/ogc:ServiceExceptionReport))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3622,7 +3630,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/ogc:ServiceExceptionReport))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3650,7 +3659,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3679,7 +3689,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3708,7 +3719,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/ogc:ServiceExceptionReport))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3737,7 +3749,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema, 'cdf:Deletes', 'cgf:Points'))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3768,7 +3781,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema, 'cgf:Points'))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3800,7 +3814,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema, 'cgf:Points', 'cgf:Lines'))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3833,7 +3848,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema, 'cgf:Points', 'cdf:Other'))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+               <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/> </message>
+               <fail />
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3864,7 +3880,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/ogc:ServiceExceptionReport))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>
@@ -3896,7 +3913,8 @@ Selecting "all" will include all tests.</p>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/ogc:ServiceExceptionReport))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
-               <fail/>
+              <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+              <fail/>
             </xsl:if>
          </xsl:for-each>
       </code>

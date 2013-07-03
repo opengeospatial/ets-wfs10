@@ -1,7 +1,14 @@
 WFS 1.0.0 Test Suite Release Notes
+==================================
 
-Changes in r5 (2013-02-08)
---------------------------
+r6 (2013-07-03)
+---------------
+- Changed remote schema references (GMLValidatingParser) to classpath references.
+- Added error messages for DescribeFeatureType tests
+
+
+r5 (2013-02-08)
+---------------
 - Updated config.xml for TEAM-Engine v4.
 - Fixed links in ctl:form.
 
