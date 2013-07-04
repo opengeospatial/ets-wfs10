@@ -14,7 +14,7 @@
         <description>Checks WFS implementations for conformance to OGC 02-058.</description>
       </suite>
       <revision>
-        <name>r6</name>
+        <name>r7</name>
         <sources>
           <source>wfs/1.0.0/ctl</source>
         </sources>
