@@ -1,9 +1,9 @@
 WFS 1.0.0 Test Suite Release Notes
 ==================================
 
-r6 (2013-07-03)
+r6 (2013-07-04)
 ---------------
-- Changed remote schema references (GMLValidatingParser) to classpath references.
+- Fixed CITE-818 (GMLValidationParser errors): Changed remote schema references to classpath references.
 - Added error messages for DescribeFeatureType tests
 
 
