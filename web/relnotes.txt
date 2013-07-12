@@ -1,6 +1,11 @@
 WFS 1.0.0 Test Suite Release Notes
 ==================================
 
+r7 (2013-07-12)
+---------------
+- fixed links from documentation to schemas.
+
+
 r6 (2013-07-04)
 ---------------
 - Fixed CITE-818 (GMLValidationParser errors): Changed remote schema references to classpath references.
