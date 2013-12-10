@@ -1,6 +1,5 @@
 
 The WFS 1.0 test suite requires the supporting libraries listed below. 
-Put them in the application lib directory (e.g. teamengine/WEB-INF/lib/).
 
 * cite1-utils-1.1.0.jar
   <https://svn.opengeospatial.org/ogc-projects/cite/maven/org/opengis/cite/cite1-utils/>
@@ -20,3 +19,7 @@ by executing the 'mvn package' phase; the project may be checked out from the OG
 repository at this location:
 
 <https://svn.opengeospatial.org/ogc-projects/cite/ets/ets-resources/trunk>
+
+
+If you are using the command-line interface, put the JAR files in TE_BASE/resources/lib/.
+Otherwise put them in the web app lib directory (WEB-INF/lib/).
