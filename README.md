@@ -2,10 +2,11 @@
 
 The OGC OGC Web Feature Service Test-Suite provides the Executable Test Script (ETS) to test implementations against the following specification(s):
 
-- OGC xxx Specification, [OGC 00-000r0](http://portal.opengeospatial.org/files/?artifact_id=00)
+- Web Feature Service Implementation Specification, version 1.0.0 [OGC 02-058] ([PDF version](http://portal.opengeospatial.org/files/index.php?artifact_id=7176), [HTML version](file:///Users/lbermudez/Documents/Dropbox/github/ets-wfs10/src/main/web/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html))
+- Filter Encoding Implementation Specification, version 1.0.0 [OGC 02-059] ([PDF version](http://portal.opengeospatial.org/files/?artifact_id=1171), [HTML version](file:///Users/lbermudez/Documents/Dropbox/github/ets-wfs10/src/main/web/OGCTestData/wfs/1.0.0/specs/filter/1.0.0/02-059.html))
 
-Detailed information about this test suite is available at  http://htmlpreview.github.com/?https://github.com/opengeospatial/ets-wfs10/blob/master/src/main/web/index.html
-http://htmlpreview.github.io/?https://github.com/opengeospatial/ets-wms-client13/blob/master/src/main/web/index.html
+Detailed information about this test suite is available [here]( http://htmlpreview.github.com/?https://github.com/opengeospatial/ets-wfs10/blob/master/src/main/web/index.html)
+
 ## License
 
 [Apache 2.0 License](LICENSE.md)
@@ -17,7 +18,11 @@ build the test suite run maven from the root directory.
    % mvn install
      
 ## To test an application:
-- Install [TEAM Engine](https://github.com/opengeospatial/teamengine/tree/master/src/site)
+For UNIX/OS Users
+   - clone this repository: **git clone https://github.com/opengeospatial/ets-wfs10.git**
+   - Run **build.sh**
+For Windows Users and more information check the instructions at the [CITE wiki](http://cite.opengeospatial.org/easytesting)
+
 
 ## Bugs
 

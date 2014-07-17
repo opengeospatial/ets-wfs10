@@ -24,7 +24,7 @@ unzip ets-wfs10-1.0.0-r8.zip $TE_BASE/scripts
 
 #download and build TEAM Engine
 cd $folder_to_build
-git clone https://github.com/opengeospatial/teamengine.git
+#git clone https://github.com/opengeospatial/teamengine.git
 cd $base/teamengine/te_build/teamengine
 git checkout $te_tag
 mvn install
