@@ -18,12 +18,13 @@ build the test suite run maven from the root directory.
    % mvn install
      
 ## To test an application:
-For UNIX/OS Users
 
-   - clone this repository: **git clone https://github.com/opengeospatial/ets-wfs10.git**
+For UNIX/OS users:
+
+   - Clone this repository: **git clone https://github.com/opengeospatial/ets-wfs10.git**
    - Run **build.sh**
 
-For Windows Users and more information check the instructions at the [CITE wiki](http://cite.opengeospatial.org/easytesting)
+For Windows users and to get more information about running tests in TEAM Engine, check the instructions at the [CITE wiki](http://cite.opengeospatial.org/easytesting)
 
 
 ## Bugs
