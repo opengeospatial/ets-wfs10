@@ -2,10 +2,10 @@
 
 The OGC OGC Web Feature Service Test-Suite provides the Executable Test Script (ETS) to test implementations against the following specification(s):
 
-- Web Feature Service Implementation Specification, version 1.0.0 [OGC 02-058] (http://portal.opengeospatial.org/files/index.php?artifact_id=7176)
-- Filter Encoding Implementation Specification, version 1.0.0 [OGC 02-059](http://portal.opengeospatial.org/files/?artifact_id=1171)
+- Web Feature Service Implementation Specification, version 1.0.0  - [OGC 02-058] (http://portal.opengeospatial.org/files/index.php?artifact_id=7176)
+- Filter Encoding Implementation Specification, version 1.0.0 - [OGC 02-059](http://portal.opengeospatial.org/files/?artifact_id=1171)
 
-Detailed information about this test suite is available [here]( http://htmlpreview.github.com/?https://github.com/opengeospatial/ets-wfs10/blob/master/src/main/web/index.html)
+Detailed information about this test suite is available [here]( http://htmlpreview.github.com/?https://github.com/opengeospatial/ets-wfs10/blob/master/src/main/web/index.html).
 
 ## License
 
