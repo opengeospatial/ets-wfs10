@@ -19,8 +19,10 @@ build the test suite run maven from the root directory.
      
 ## To test an application:
 For UNIX/OS Users
+
    - clone this repository: **git clone https://github.com/opengeospatial/ets-wfs10.git**
    - Run **build.sh**
+
 For Windows Users and more information check the instructions at the [CITE wiki](http://cite.opengeospatial.org/easytesting)
 
 
