@@ -29,7 +29,7 @@ For Windows users and to get more information about running tests in TEAM Engine
 
 ## Bugs
 
-Issue tracker is available at [github](https://github.com/opengeospatial/ets-wfs10/issues)
+Issue tracker is available at [github](https://github.com/opengeospatial/ets-wfs10/issues).
 
 ## Mailing Lists
 
