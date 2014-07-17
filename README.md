@@ -24,7 +24,7 @@ For UNIX/OS users:
    - Clone this repository: **git clone https://github.com/opengeospatial/ets-wfs10.git**
    - Run **build.sh**
 
-For Windows users and to get more information about running tests in TEAM Engine, check the instructions at the [CITE wiki](http://cite.opengeospatial.org/easytesting)
+For Windows users and to get more information about running tests in TEAM Engine, check the instructions at the [CITE wiki](http://cite.opengeospatial.org/easytesting).
 
 
 ## Bugs
