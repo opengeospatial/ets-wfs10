@@ -17,36 +17,23 @@ r5 (2013-02-08)
 - Updated config.xml for TEAM-Engine v4.
 - Fixed links in ctl:form.
 
-=== Changes included in R4 ===
+r4
+----------------------------------
 - updated description of the test (index.html), linked to executive summary (execsummary.html) and test requirements (testreq.html)
 
-=== Changes included in R3 ===
-
-2010-11-15 (kstegemoller):
+r3 (2010-11-15)
+---------------------
 - updated release notes.
-- tag r3 - WFS 1.0.0
-
-2010-09-06 (aschmitz):
 - another fix related to #552 (for LockFeature)
 - fixed issue #552 as proposed in issue description
-
-2010-07-14 (aschmitz):
 - fixed issue #28
-
-2010-06-14 (aschmitz):
 - fixed issue #492
 
-=== Changes included in R2 ===
-
-2010-05-13 (kstegemoller):
-- production release of WFS 1.0.0 R2
-- updated release notes.
-
-2010-05-09 (jdeoliveira1):
+r2 (2010-05-13)
+-------------------
 - committed fixes to wfs 1.0 cite test suite as discussed on cite list
 
-=== Changes included in R1 ===
-
-2009-10-12 (kstegemoller):
-- tag r1 - WFS 1.0.0
+r1 (2009-10-12)
+----------------------
+- first release
 

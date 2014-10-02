@@ -14,11 +14,11 @@
         <description>Checks WFS implementations for conformance to OGC 02-058.</description>
       </suite>
       <revision>
-        <name>r8</name>
+        <name>${project.version}</name>
         <sources>
-          <source>wfs/1.0.0/ctl</source>
+          <source>wfs/${spec-version}/ctl</source>
         </sources>
-        <webdir>wfs/1.0.0/web</webdir>
+        <webdir>wfs/${spec-version}/site</webdir>
       </revision>
     </version>
   </standard>
