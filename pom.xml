@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
   <artifactId>ets-wfs10</artifactId>
   <groupId>org.opengis.cite</groupId>
-  <version>r8</version>
+  <version>r8-SNAPSHOT</version>
 
   <name>Conformance Test Suite - OGC Web Feature Service 1.0.0</name>
   <description>
@@ -23,7 +24,9 @@
     <url>http://www.opengeospatial.org</url>
   </organization>
   <scm>
-    <url>https://github.com/opengeospatial/ets-wfs10</url>    <connection>scm:git:https://github.com/opengeospatial/ets-wfs10.git</connection>    <developerConnection>scm:git:git@github.com:opengeospatial/ets-wfs10.git</developerConnection>
+    <url>https://github.com/opengeospatial/ets-wfs10</url>    
+    <connection>scm:git:https://github.com/opengeospatial/ets-wfs10.git</connection>    
+    <developerConnection>scm:git:git@github.com:opengeospatial/ets-wfs10.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
   <issueManagement>
@@ -41,7 +44,7 @@
       <plugin>
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <version>2.7</version>
-         <reportSets>
+        <reportSets>
           <reportSet>
             <reports>
               <report>license</report>
@@ -53,11 +56,18 @@
       </plugin>  
     </plugins>
   </reporting> 
-  
- <build>
-    <plugins>  
-    
-    <plugin>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.opengis.cite</groupId>
+      <artifactId>cite1-utils</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <executions>
           <execution>
@@ -65,8 +75,8 @@
             <phase>never</phase>
           </execution>
         </executions>
-    </plugin>
-    <plugin>
+      </plugin>
+      <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <skipTests>true</skipTests>
@@ -76,10 +86,11 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <configuration>
           <descriptors>
-            <descriptor>src/assembly/ctl.xml</descriptor>
+            <descriptor>${basedir}/src/assembly/ctl.xml</descriptor>
+            <descriptor>${basedir}/src/assembly/deps.xml</descriptor>
           </descriptors>
         </configuration>
-         <executions>
+        <executions>
           <execution>
             <phase>package</phase>
             <goals>
@@ -89,13 +100,13 @@
         </executions>
       </plugin>
       <plugin>
-          <artifactId>maven-release-plugin</artifactId>
-           <version>2.5</version>
-         </plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.1</version>
+      </plugin>
       <plugin>     
-         <artifactId>maven-site-plugin</artifactId>
-         <configuration>
-            <relativizeDecorationLinks>false</relativizeDecorationLinks>      
+        <artifactId>maven-site-plugin</artifactId>
+        <configuration>
+          <relativizeDecorationLinks>false</relativizeDecorationLinks>      
         </configuration>
         <executions>
           <execution>
@@ -116,4 +127,5 @@
       </plugin>
     </plugins>   
   </build>
+  
 </project>
