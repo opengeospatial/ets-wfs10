@@ -1,6 +1,10 @@
 WFS 1.0.0 Test Suite Release Notes
 ==================================
 
+1.8 (2015-03-05)
+------------------
+- update to new version scheme
+
 r7 (2013-07-12)
 ---------------
 - fixed links from documentation to schemas.
