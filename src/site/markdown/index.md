@@ -7,8 +7,8 @@ specification.
 
 This test suite is based on the following documents:
 
-  * _Web Feature Service Implementation Specification_, version 1.0.0 [OGC 02-058] ([PDF version](http://portal.opengeospatial.org/files/index.php?artifact_id=7176), [HTML version](OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html))
-  * _Filter Encoding Implementation Specification_, version 1.0.0 [OGC 02-059] ([PDF version](http://portal.opengeospatial.org/files/?artifact_id=1171), [HTML version](OGCTestData/wfs/1.0.0/specs/filter/1.0.0/02-059.html))
+  * _Web Feature Service Implementation Specification_, version 1.0.0 [OGC 02-058]([PDF version](http://portal.opengeospatial.org/files/index.php?artifact_id=7176), [HTML version](OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html))
+  * _Filter Encoding Implementation Specification_, version 1.0.0 [OGC 02-059]([PDF version](http://portal.opengeospatial.org/files/?artifact_id=1171), [HTML version](OGCTestData/wfs/1.0.0/specs/filter/1.0.0/02-059.html))
   * _Web Feature Service Requirements_ ([HTML version](testreq.html))
   * _Test Data for WFS 1.0.0 tests_ ([Test Data](http://cite.opengeospatial.org/teamengine/about/wfs/1.0.0/web/data/data-wfs-1.0.0.zip))
 
@@ -27,6 +27,17 @@ on the operations supported in the capabilities document.
   * **Basic** \- GetCapabilities, DescribeFeatureType and GetFeature
   * **Transactional** \- Basic + Transaction
   * **Locking** \- Transactional + LockFeature and GetFeatureWithLock
+
+# Dependencies
+
+This test depends on [cite-1-utils](https://github.com/opengeospatial/cite1-utils), where a GML Validator parser and the following schemas can be found:
+
+- schemas/OGC-1.0.0/OGC_Wrapper.xsd
+- schemas/WFS-1.0.0/WFS_Wrapper.xsd
+- schemas/complexFeatures.xsd
+- schemas/dataFeatures.xsd
+- schemas/geometryFeatures.xsd
+
 
 # Release Notes
 
