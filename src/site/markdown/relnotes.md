@@ -1,13 +1,17 @@
 WFS 1.0.0 Test Suite Release Notes
 ==================================
 
+1.9 (2015-07-30)
+----------------
+- Update pom.xml to build with Maven 2
+
 1.8 (2015-03-05)
 ------------------
-- update to new version scheme
+- Update to new version scheme
 
 r7 (2013-07-12)
 ---------------
-- fixed links from documentation to schemas.
+- fixed links from documentation to schemas
 
 
 r6 (2013-07-04)
