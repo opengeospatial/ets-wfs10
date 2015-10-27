@@ -1,6 +1,10 @@
 WFS 1.0.0 Test Suite Release Notes
 ==================================
 
+1.10 (2015-10-27)
+----------------
+- test data link is broken in site (https://github.com/opengeospatial/ets-wfs10/issues/5)
+
 1.9 (2015-07-30)
 ----------------
 - Update pom.xml to build with Maven 2
