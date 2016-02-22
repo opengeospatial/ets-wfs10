@@ -17767,8 +17767,6 @@ boolean(count(/wfs:FeatureCollection/gml:featureMember/cdf:Seven) = 5))</xsl:var
          </xsl:variable>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/wfs:FeatureCollection/gml:featureMember/cdf:Other[
-  gml:description and
-  gml:name and
   gml:boundedBy and
   gml:pointProperty and
   cdf:string1 and
@@ -18148,8 +18146,6 @@ boolean(count(/wfs:FeatureCollection/gml:featureMember/cdf:Seven) = 5))</xsl:var
          </xsl:variable>
          <xsl:for-each select="$request1">
             <xsl:variable name="expression">not(boolean(/wfs:FeatureCollection/gml:featureMember/cdf:Other[
-  gml:description and
-  gml:name and
   gml:boundedBy and
   gml:pointProperty and
   cdf:string1 and
