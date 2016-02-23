@@ -1,6 +1,10 @@
 WFS 1.0.0 Test Suite Release Notes
 ==================================
 
+1.11 (2016-02-23)
+----------------
+- gml:description and gml:name must be optional (https://github.com/opengeospatial/ets-wfs10/issues/3)
+
 1.10 (2015-10-27)
 ----------------
 - test data link is broken in site (https://github.com/opengeospatial/ets-wfs10/issues/5)
