@@ -157,7 +157,7 @@ document.</p>
                         </tr>
                        <tr>
                          <td align="center">
-                           <input name="multiplenamenspaces" type="checkbox" value="multiplenamenspaces"/>
+                           <input name="multiplenamenspaces" type="checkbox" value="multiplenamenspaces" checked="checked" />
                          </td>
                          <td align="left">Enable tests with multiple namespaces</td>
                        </tr>
