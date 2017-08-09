@@ -19651,7 +19651,7 @@ boolean(/wfs:WFS_Capabilities/wfs:FeatureTypeList/wfs:FeatureType/wfs:Operations
   <wfs:Update typeName="cdf:Locks">
     <wfs:Property>
       <wfs:Name>cdf:id</wfs:Name>
-      <wfs:Value>gfwlrs0005</wfs:Value>
+      <wfs:Value>gfwlrs0006</wfs:Value>
     </wfs:Property>
     <ogc:Filter>
       <ogc:FeatureId fid="{$VAR_featureId2}"/>
@@ -22972,7 +22972,7 @@ count(/wfs:WFS_LockFeatureResponse/wfs:FeaturesNotLocked/ogc:FeatureId) = 0)</xs
   <wfs:Update typeName="cdf:Locks">
     <wfs:Property>
       <wfs:Name>cdf:id</wfs:Name>
-      <wfs:Value>lfrs0005</wfs:Value>
+      <wfs:Value>lfrs0006</wfs:Value>
     </wfs:Property>
     <ogc:Filter>
       <ogc:FeatureId fid="{$VAR_featureId2}"/>
