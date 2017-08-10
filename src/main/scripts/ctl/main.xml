@@ -124,23 +124,6 @@
             </tr>
           </table>
         </blockquote>
-        <h4>Functional Groups</h4>
-        <br />
-        <br />
-        <p>The following groups can be selected. Selecting one or more
-          groups will limit the selection of tests to just those groups.
-          Selecting "all" will include all tests.
-        </p>
-        <blockquote>
-          <table border="3" padding="3">
-            <tr>
-              <td align="center">
-                <input name="all" type="checkbox" value="all" />
-              </td>
-              <td align="left">All</td>
-            </tr>
-          </table>
-        </blockquote>
         <input type="submit" value="OK" />
       </body>
     </ctl:form>

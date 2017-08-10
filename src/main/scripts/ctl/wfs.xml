@@ -77,7 +77,6 @@
    <test name="wfs:main">
      <param name="capabilities-url"/>
      <param name="complexvalue"/>
-     <param name="all"/>
       <assertion>This WFS is valid</assertion>
       <code>
          <xsl:variable name="VAR_WFS_CAPABILITIES_URL">
@@ -90,7 +89,6 @@
          </xsl:variable>
          <xsl:variable name="complexvalue"
                        select="boolean($complexvalue)"/>
-         <xsl:variable name="all" select="boolean($all)"/>
          <xsl:for-each select="$VAR_WFS_CAPABILITIES_URL">
             <xsl:variable name="VAR_WFS_VERSION">
                <xsl:value-of select="string(/wfs:WFS_Capabilities/@version)"/>
