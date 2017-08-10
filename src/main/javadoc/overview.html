@@ -55,6 +55,49 @@ dt {
   </head>
   <body>
     <h1>WFS 1.0 Conformance Test Suite</h1>
-    <p>This executable test suite (ETS) checks WFS 1.0 implementations for conformance.</p>
+    <p>Verifies that a Web Feature Service (WFS) implementation conforms to the relevant specifications:</p>
+    <ul>
+      <li>OpenGIS Web Feature Server Implementation Specification, Version 1.1.0 [<a target="_blank" href="http://portal.opengeospatial.org/files/?artifact_id=8339">OGC 04-094</a>]</li>
+    </ul>
+
+    <p>The test run arguments are summarized in the following table. The <em>Obligation</em>
+      descriptor can have the following values: M (mandatory), O (optional), or C
+      (conditional).</p>
+
+    <table id="input-arguments" border="1" style="border-collapse: collapse;">
+      <caption>Test run arguments</caption>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value domain</th>
+        <th>Obligation</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr id="capabilities-url">
+        <td>capabilities-url</td>
+        <td>URI</td>
+        <td>M</td>
+        <td>An absolute URI that refers to an XML representation of the service capabilities document.
+          This document does not need to be obtained from the service under test (SUT), but it must
+          describe the implementation under test (IUT). Ampersand ('&amp;') characters appearing within
+          a query parameter value must be percent-encoded as %26.</td>
+      </tr>
+      <tr id="complexvalue">
+        <td>complexvalue</td>
+        <td>Boolean (default: false)</td>
+        <td>O</td>
+        <td>Enable tests with complex property values.</td>
+      </tr>
+      <tr id="all">
+        <td>all</td>
+        <td>Boolean (default: false)</td>
+        <td>O (required if updatesequence="manual") </td>
+        <td>A version that is lower than the current updateSequence value.</td>
+      </tr>
+      </tbody>
+    </table>
+
   </body>
 </html>
