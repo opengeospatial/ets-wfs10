@@ -155,6 +155,12 @@ document.</p>
                            </td>
                            <td align="left">Enable tests with complex property values</td>
                         </tr>
+                       <tr>
+                         <td align="center">
+                           <input name="multiplenamenspaces" type="checkbox" value="multiplenamenspaces" checked="checked" />
+                         </td>
+                         <td align="left">Enable tests with multiple namespaces</td>
+                       </tr>
                      </table>
                   </blockquote>
                   <h4>Functional Groups</h4>
@@ -187,7 +193,9 @@ Selecting "all" will include all tests.</p>
          </xsl:variable>
          <xsl:variable name="complexvalue"
                        select="boolean($form-values/values/value[@key='complexvalue'])"/>
-         <xsl:variable name="all" select="boolean($form-values/values/value[@key='all'])"/>
+        <xsl:variable name="multiplenamenspaces"
+                      select="boolean($form-values/values/value[@key='multiplenamenspaces'])"/>
+        <xsl:variable name="all" select="boolean($form-values/values/value[@key='all'])"/>
          <xsl:for-each select="$VAR_WFS_CAPABILITIES_URL">
             <xsl:variable name="VAR_WFS_VERSION">
                <xsl:value-of select="string(/wfs:WFS_Capabilities/@version)"/>
@@ -435,12 +443,6 @@ Selecting "all" will include all tests.</p>
                </call-test>
             </xsl:if>
             <xsl:if test="$describefeaturetypeget">
-               <call-test name="wfs:test1.0.0-basic-describefeaturetype-get-7">
-                  <with-param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"
-                              select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>
-               </call-test>
-            </xsl:if>
-            <xsl:if test="$describefeaturetypeget">
                <call-test name="wfs:test1.0.0-basic-describefeaturetype-get-8">
                   <with-param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"
                               select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>
@@ -484,12 +486,6 @@ Selecting "all" will include all tests.</p>
             </xsl:if>
             <xsl:if test="$describefeaturetypepost">
                <call-test name="wfs:test1.0.0-basic-describefeaturetype-post-6">
-                  <with-param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"
-                              select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>
-               </call-test>
-            </xsl:if>
-            <xsl:if test="$describefeaturetypepost">
-               <call-test name="wfs:test1.0.0-basic-describefeaturetype-post-7">
                   <with-param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"
                               select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>
                </call-test>
@@ -2770,6 +2766,30 @@ Selecting "all" will include all tests.</p>
                               select="$VAR_WFS_GET_FEATURE_HTTP_POST_URL"/>
                </call-test>
             </xsl:if>
+           <xsl:if test="$multiplenamenspaces and $describefeaturetypeget">
+             <call-test name="wfs:test1.0.0-multiplenamespaces-describefeaturetype-get-1">
+               <with-param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"
+                           select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>
+             </call-test>
+           </xsl:if>
+           <xsl:if test="$multiplenamenspaces and $describefeaturetypepost">
+             <call-test name="wfs:test1.0.0-multiplenamespaces-describefeaturetype-post-1">
+               <with-param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"
+                           select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>
+             </call-test>
+           </xsl:if>
+           <xsl:if test="$multiplenamenspaces and $describefeaturetypeget">
+             <call-test name="wfs:test1.0.0-multiplenamespaces-describefeaturetype-get-2">
+               <with-param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"
+                           select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>
+             </call-test>
+           </xsl:if>
+           <xsl:if test="$multiplenamenspaces and $describefeaturetypepost">
+             <call-test name="wfs:test1.0.0-multiplenamespaces-describefeaturetype-post-2">
+               <with-param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"
+                           select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>
+             </call-test>
+           </xsl:if>
             <xsl:if test="$lock">
                <call-test name="wfs:test1.0.0-lock-getcapabilities-get-1">
                   <with-param name="VAR_WFS_GET_CAPABILITIES_HTTP_GET_URL"
@@ -3493,7 +3513,9 @@ Selecting "all" will include all tests.</p>
             </request>
          </xsl:variable>
          <xsl:for-each select="$request1">
-            <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema, 'cdf:Deletes', 'cgf:Points'))</xsl:variable>
+            <xsl:variable name="expression">not(boolean(/xs:schema) and
+                                                (citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema, 'cdf:Deletes') or
+                                                 citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema, 'cgf:Points')))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
               <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
               <fail/>
@@ -3555,7 +3577,7 @@ Selecting "all" will include all tests.</p>
          </xsl:for-each>
       </code>
    </test>
-   <test name="wfs:test1.0.0-basic-describefeaturetype-get-7">
+   <test name="wfs:test1.0.0-multiplenamespaces-describefeaturetype-get-1">
       <param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>
       <assertion>When a wfs:DescribeFeatureType request is made with a multiple TypeNames in different namespaces, the result document must be an GML XML schema document that describes the specified feature types.</assertion>
       <comment><![CDATA[This test issues a wfs:DescribeFeatureType request using HTTP GET to the WFS server under test. The request will include the typeName cgf:Points,cdf:Other. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for cdf:Inserts feature types cgf:Points,cdf:Other.]]></comment>
@@ -3582,6 +3604,32 @@ Selecting "all" will include all tests.</p>
          </xsl:for-each>
       </code>
    </test>
+   <test name="wfs:test1.0.0-multiplenamespaces-describefeaturetype-get-2">
+    <param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>
+    <assertion>When a wfs:DescribeFeatureType request is made without a TypeName, the result document must be an GML XML schema document that describes all feature types served by the WFS.</assertion>
+    <comment><![CDATA[This test issues a wfs:DescribeFeatureType request using HTTP GET to the WFS server under test. The request will not include the typeName. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for one feature type for each of the CITE schemas.]]></comment>
+    <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.DescribeFeatureType</ctl:link>
+    <code>
+      <xsl:variable name="request1">
+        <request>
+          <url>
+            <xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>
+          </url>
+          <method>get</method>
+          <param name="service">WFS</param>
+          <param name="version">1.0.0</param>
+          <param name="request">DescribeFeatureType</param>
+        </request>
+      </xsl:variable>
+      <xsl:for-each select="$request1">
+        <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>',/xs:schema, 'cdf:Deletes'))</xsl:variable>
+        <xsl:if test="saxon:evaluate($expression)">
+          <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+          <fail/>
+        </xsl:if>
+      </xsl:for-each>
+    </code>
+  </test>
    <test name="wfs:test1.0.0-basic-describefeaturetype-get-8">
       <param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_GET_URL"/>
       <assertion>When a wfs:DescribeFeatureType request is made with a single TypeName that does not exist, the result document must be an ogc:ServiceExceptionReport.</assertion>
@@ -3747,7 +3795,9 @@ Selecting "all" will include all tests.</p>
             </request>
          </xsl:variable>
          <xsl:for-each select="$request1">
-            <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema, 'cdf:Deletes', 'cgf:Points'))</xsl:variable>
+            <xsl:variable name="expression">not(boolean(/xs:schema) and
+                                                (citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema, 'cdf:Deletes') or
+                                                 citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema, 'cgf:Points')))</xsl:variable>
             <xsl:if test="saxon:evaluate($expression)">
               <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
               <fail/>
@@ -3820,7 +3870,7 @@ Selecting "all" will include all tests.</p>
          </xsl:for-each>
       </code>
    </test>
-   <test name="wfs:test1.0.0-basic-describefeaturetype-post-7">
+   <test name="wfs:test1.0.0-multiplenamespaces-describefeaturetype-post-1">
       <param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>
       <assertion>When a wfs:DescribeFeatureType request is made with a multiple TypeNames in different namespaces, the result document must be an GML XML schema document that describes the specified feature types.</assertion>
       <comment><![CDATA[This test issues a wfs:DescribeFeatureType request using HTTP POST to the WFS server under test. The request will include the typeName cgf:Points,cdf:Other. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for cdf:Inserts feature types cgf:Points,cdf:Other.]]></comment>
@@ -3854,6 +3904,36 @@ Selecting "all" will include all tests.</p>
          </xsl:for-each>
       </code>
    </test>
+  <test name="wfs:test1.0.0-multiplenamespaces-describefeaturetype-post-2">
+    <param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>
+    <assertion>When a wfs:DescribeFeatureType request is made without a TypeName, the result document must be an GML XML schema document that describes all feature types served by the WFS.</assertion>
+    <comment><![CDATA[This test issues a wfs:DescribeFeatureType request using HTTP POST to the WFS server under test. The request will not include the typeName. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for one feature type for each of the CITE schemas.]]></comment>
+    <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#DescribeFeatureType</ctl:link>
+    <code>
+      <xsl:variable name="request1">
+        <request>
+          <url>
+            <xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>
+          </url>
+          <method>post</method>
+          <body><wfs:DescribeFeatureType
+                  service="WFS"
+                  version="1.0.0"
+                  outputFormat="XMLSCHEMA"
+                  xmlns:wfs="http://www.opengis.net/wfs"
+          >
+          </wfs:DescribeFeatureType></body>
+        </request>
+      </xsl:variable>
+      <xsl:for-each select="$request1">
+        <xsl:variable name="expression">not(boolean(/xs:schema) and citef:validate-gml-schema('<xsl:value-of select="$VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>',/xs:schema, 'cdf:Deletes', 'cgf:Points'))</xsl:variable>
+        <xsl:if test="saxon:evaluate($expression)">
+          <message>[FAILED] XPath expression is 'true': <xsl:value-of select="$expression"/></message>
+          <fail/>
+        </xsl:if>
+      </xsl:for-each>
+    </code>
+  </test>
    <test name="wfs:test1.0.0-basic-describefeaturetype-post-8">
       <param name="VAR_WFS_DESCRIBE_FEATURE_TYPE_HTTP_POST_URL"/>
       <assertion>When a wfs:DescribeFeatureType request is made with a single TypeName that does not exist, the result document must be an ogc:ServiceExceptionReport.</assertion>

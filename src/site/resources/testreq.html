@@ -274,6 +274,13 @@ or it may propose rationale as to why a test is classified as untestable.
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="TOCLevel2" href="#lockGetFeatureWithLockReleaseAction-- release action GetFeatureWithLock tests">lockGetFeatureWithLockReleaseAction - release action GetFeatureWithLock tests</a>
 <br />
+<br /><br />
+&nbsp;&nbsp;&nbsp;<a class="TOCLevel0" href="#multiplenamespaces-- Multiple Namespaces WFS Tests">multiplenamespaces - Multiple Namespaces WFS Tests</a>
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="TOCLevel1" href="#multiplenamespacesDescribeFeatureType-- Multiple Namespaces DescribeFeatureType Tests">multiplenamespacesDescribeFeatureType - Multiple Namespaces DescribeFeatureType Tests</a>
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="TOCLevel2" href="#multiplenamespacesDescribeFeatureTypeGet-- Multiple Namespaces DescribeFeatureType Tests (GET)">multiplenamespacesDescribeFeatureTypeGet - Multiple Namespaces DescribeFeatureType Tests (GET)</a>
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="TOCLevel2" href="#multiplenamespacesDescribeFeatureTypePost-- Multiple Namespaces DescribeFeatureType Tests (POST)">multiplenamespacesDescribeFeatureTypePost - Multiple Namespaces DescribeFeatureType Tests (POST)</a>
+<br />
 <br />
 <br /><br />
 
@@ -773,29 +780,6 @@ or it may propose rationale as to why a test is classified as untestable.
 <tr><td><table>
 <tr>
 <td align="right" valign="top"><b>ID:</b></td>
-<td>wfs/1.0.0/basic/describefeaturetype/get/7</td>
-</tr>
-<tr>
-<td align="right" valign="top"><b>Class:</b></td>
-<td>C</td>
-</tr>
-<tr>
-<td align="right" valign="top"><b>Scope:</b></td>
-<td>The Server supports WFS DescribeFeatureType operations over HTTP GET.</td>
-</tr><tr>
-<td align="right" valign="top"><b>Text:</b></td>
-<td>When a wfs:DescribeFeatureType request is made with a multiple TypeNames in different namespaces, the result document must be an GML XML schema document that describes the specified feature types. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.DescribeFeatureType">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section KVP.DescribeFeatureType</a>]</td>
-</tr>
-<tr>
-<td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a wfs:DescribeFeatureType request using HTTP GET to the WFS server under test. The request will include the typeName cgf:Points,cdf:Other. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for cdf:Inserts feature types cgf:Points,cdf:Other.</td>
-</tr>
-</table>
-<br />
-</td></tr>
-<tr><td><table>
-<tr>
-<td align="right" valign="top"><b>ID:</b></td>
 <td>wfs/1.0.0/basic/describefeaturetype/get/8</td>
 </tr>
 <tr>
@@ -974,29 +958,6 @@ or it may propose rationale as to why a test is classified as untestable.
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
 <td>This test issues a wfs:DescribeFeatureType request using HTTP POST to the WFS server under test. The request will include the typeName cgf:Points,cgf:Lines. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for cdf:Inserts feature types cgf:Points,cgf:Lines.</td>
-</tr>
-</table>
-<br />
-</td></tr>
-<tr><td><table>
-<tr>
-<td align="right" valign="top"><b>ID:</b></td>
-<td>wfs/1.0.0/basic/describefeaturetype/post/7</td>
-</tr>
-<tr>
-<td align="right" valign="top"><b>Class:</b></td>
-<td>C</td>
-</tr>
-<tr>
-<td align="right" valign="top"><b>Scope:</b></td>
-<td>The Server supports WFS DescribeFeatureType operations over HTTP POST.</td>
-</tr><tr>
-<td align="right" valign="top"><b>Text:</b></td>
-<td>When a wfs:DescribeFeatureType request is made with a multiple TypeNames in different namespaces, the result document must be an GML XML schema document that describes the specified feature types. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#DescribeFeatureType">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section DescribeFeatureType</a>]</td>
-</tr>
-<tr>
-<td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a wfs:DescribeFeatureType request using HTTP POST to the WFS server under test. The request will include the typeName cgf:Points,cdf:Other. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for cdf:Inserts feature types cgf:Points,cdf:Other.</td>
 </tr>
 </table>
 <br />
@@ -11755,6 +11716,104 @@ The first step of a relative location path may correspond to the root element of
 <td align="right" valign="top"><b>Note:</b></td>
 <td>Assuming that a WFS implementation supports the optional LockFeature and/or GetFeatureWithLock operations, the releaseAction attribute is used to control how locked features are treated when a transaction request is completed. A value of ALL indicates that the locks on all feature instances locked using the specified "LockId" should be released when the transaction completes, regardless of whether or not a particular feature instance in the locked set was actually operated upon.</td>
 </tr>
+</table>
+</td></tr>
+</table><h1><a name="multiplenamespaces-- Multiple Namespaces WFS Tests">multiplenamespaces - Multiple Namespaces WFS Tests</a></h1>
+<p>There are no testable assertions in this section.</p>
+<h2><a name="multiplenamespacesDescribeFeatureType-- Multiple Namespaces DescribeFeatureType Tests">multiplenamespacesDescribeFeatureType - Multiple Namespaces DescribeFeatureType Tests</a></h2>
+<p>There are no testable assertions in this section.</p>
+<h3><a name="multiplenamespacesDescribeFeatureTypeGet-- Multiple Namespaces DescribeFeatureType Tests (GET)">multiplenamespacesDescribeFeatureTypeGet - Multiple Namespaces DescribeFeatureType Tests (GET)</a></h3>
+<table cellpadding="3" border="3">
+<tr><td><table>
+    <tr>
+      <td align="right" valign="top"><b>ID:</b></td>
+      <td>wfs/1.0.0/multiplenamespaces/describefeaturetype/get/1</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top"><b>Class:</b></td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top"><b>Scope:</b></td>
+      <td>The Server supports WFS DescribeFeatureType operations over HTTP GET.</td>
+    </tr><tr>
+    <td align="right" valign="top"><b>Text:</b></td>
+    <td>When a wfs:DescribeFeatureType request is made with a multiple TypeNames in different namespaces, the result document must be an GML XML schema document that describes the specified feature types. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.DescribeFeatureType">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section KVP.DescribeFeatureType</a>]</td>
+  </tr>
+    <tr>
+      <td align="right" valign="top"><b>Note:</b></td>
+      <td>This test issues a wfs:DescribeFeatureType request using HTTP GET to the WFS server under test. The request will include the typeName cgf:Points,cdf:Other. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for cdf:Inserts feature types cgf:Points,cdf:Other.</td>
+    </tr>
+  </table>
+<br />
+</td></tr>
+<tr><td><table>
+    <tr>
+      <td align="right" valign="top"><b>ID:</b></td>
+      <td>wfs/1.0.0/multiplenamespaces/describefeaturetype/get/2</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top"><b>Class:</b></td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top"><b>Scope:</b></td>
+      <td>The Server supports WFS DescribeFeatureType operations over HTTP GET.</td>
+    </tr><tr>
+    <td align="right" valign="top"><b>Text:</b></td>
+    <td>When a wfs:DescribeFeatureType request is made without a TypeName, the result document must be an GML XML schema document that describes all feature types served by the WFS. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.DescribeFeatureType">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section KVP.DescribeFeatureType</a>]</td>
+  </tr>
+    <tr>
+      <td align="right" valign="top"><b>Note:</b></td>
+      <td>This test issues a wfs:DescribeFeatureType request using HTTP GET to the WFS server under test. The request will not include the typeName. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for one feature type for each of the CITE schemas.</td>
+    </tr>
+  </table>
+</td></tr>
+</table><h3><a name="multiplenamespacesDescribeFeatureTypePost-- Multiple Namespaces DescribeFeatureType Tests (POST)">multiplenamespacesDescribeFeatureTypePost - Multiple Namespaces DescribeFeatureType Tests (POST)</a></h3>
+<table cellpadding="3" border="3">
+<tr><td><table>
+    <tr>
+      <td align="right" valign="top"><b>ID:</b></td>
+      <td>wfs/1.0.0/multiplenamespaces/describefeaturetype/post/1</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top"><b>Class:</b></td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top"><b>Scope:</b></td>
+      <td>The Server supports WFS DescribeFeatureType operations over HTTP POST.</td>
+    </tr><tr>
+    <td align="right" valign="top"><b>Text:</b></td>
+    <td>When a wfs:DescribeFeatureType request is made with a multiple TypeNames in different namespaces, the result document must be an GML XML schema document that describes the specified feature types. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#DescribeFeatureType">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section DescribeFeatureType</a>]</td>
+  </tr>
+    <tr>
+      <td align="right" valign="top"><b>Note:</b></td>
+      <td>This test issues a wfs:DescribeFeatureType request using HTTP POST to the WFS server under test. The request will include the typeName cgf:Points,cdf:Other. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for cdf:Inserts feature types cgf:Points,cdf:Other.</td>
+    </tr>
+  </table>
+<br />
+</td></tr>
+<tr><td><table>
+  <tr>
+    <td align="right" valign="top"><b>ID:</b></td>
+    <td>wfs/1.0.0/multiplenamespaces/describefeaturetype/post/2</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top"><b>Class:</b></td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td align="right" valign="top"><b>Scope:</b></td>
+    <td>The Server supports WFS DescribeFeatureType operations over HTTP POST.</td>
+  </tr><tr>
+  <td align="right" valign="top"><b>Text:</b></td>
+  <td>When a wfs:DescribeFeatureType request is made without a TypeName, the result document must be an GML XML schema document that describes all feature types served by the WFS. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#DescribeFeatureType">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section DescribeFeatureType</a>]</td>
+</tr>
+  <tr>
+    <td align="right" valign="top"><b>Note:</b></td>
+    <td>This test issues a wfs:DescribeFeatureType request using HTTP POST to the WFS server under test. The request will not include the typeName. The response document will be tested to check that the root element is a xs:schema element, it conforms to the GML rules and contains definitions for one feature type for each of the CITE schemas.</td>
+  </tr>
 </table>
 </td></tr>
 </table><br />
