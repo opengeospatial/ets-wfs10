@@ -8,7 +8,7 @@
       <name>1.0.0</name>
       <suite>
         <namespace-uri>http://www.opengis.net/wfs</namespace-uri>
-        <prefix>wfs</prefix>
+        <prefix>main</prefix>
         <local-name>main_wfs</local-name>
         <title>WFS 1.0 Conformance Test Suite</title>
         <description>Checks WFS implementations for conformance to OGC 02-058.</description>
@@ -16,7 +16,7 @@
       <revision>
         <name>${project.version}</name>
         <sources>
-          <source>wfs/${spec-version}/ctl</source>
+          <source>wfs/${spec-version}/ctl/main.xml</source>
         </sources>
         <webdir>wfs/${spec-version}/site</webdir>
       </revision>

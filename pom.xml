@@ -8,10 +8,9 @@
   <version>1.12-SNAPSHOT</version>
 
   <name>Conformance Test Suite - OGC Web Feature Service 1.0.0</name>
-  <description>
-  Verifies conformance of implementations to OGC Web Feature Service 1.0.0.
-  </description>
+  <description>Verifies conformance of implementations to OGC Web Feature Service 1.0.0.</description>
   <url>https://github.com/opengeospatial/ets-wfs10</url>
+
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -23,22 +22,26 @@
     <name>Open Geospatial Consortium</name>
     <url>http://www.opengeospatial.org</url>
   </organization>
+
   <scm>
     <url>https://github.com/opengeospatial/ets-wfs10</url>    
     <connection>scm:git:https://github.com/opengeospatial/ets-wfs10.git</connection>    
     <developerConnection>scm:git:git@github.com:opengeospatial/ets-wfs10.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
+
   <issueManagement>
     <system>GitHub Issue Tracker</system>
     <url>https://github.com/opengeospatial/ets-wfs10/issues</url>
   </issueManagement>
+
   <properties>
     <ets-code>wfs</ets-code>
     <spec-version>1.0.0</spec-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <teamengine.version>4.0.5</teamengine.version>
+    <teamengine.version>4.10</teamengine.version>
   </properties>  
+
   <reporting>
     <plugins>
       <plugin>
@@ -63,16 +66,30 @@
       <artifactId>cite1-utils</artifactId>
       <version>1.1.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.opengis.cite.teamengine</groupId>
+      <artifactId>teamengine-spi-ctl</artifactId>
+      <version>${teamengine.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <executions>
           <execution>
             <id>default-jar</id>
-            <phase>never</phase>
+            <phase>package</phase>
           </execution>
         </executions>
       </plugin>
@@ -103,7 +120,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>2.5.1</version>
       </plugin>
-      <plugin>     
+      <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <version>3.4</version>
         <configuration>
@@ -126,7 +143,87 @@
           </dependency>
         </dependencies>
       </plugin>
-    </plugins>   
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>create</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <doCheck>false</doCheck>
+          <doUpdate>false</doUpdate>
+          <shortRevisionLength>10</shortRevisionLength>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+            </manifest>
+            <manifestEntries>
+              <Build-Host>${hostname}</Build-Host>
+              <Build-Time>${maven.build.timestamp}</Build-Time>
+              <Build-Revision>${buildNumber}</Build-Revision>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>${basedir}/src/main/scripts</directory>
+        <targetPath>${ets-code}/${spec-version}</targetPath>
+      </resource>
+      <resource>
+        <directory>src/main/javadoc</directory>
+        <filtering>true</filtering>
+        <targetPath>doc/${ets-code}/${project.version}</targetPath>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>${basedir}/src/test/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>*.properties</include>
+        </includes>
+      </testResource>
+    </testResources>
   </build>
-  
+
+  <profiles>
+    <profile>
+      <id>windows</id>
+      <activation>
+        <os><family>windows</family></os>
+      </activation>
+      <properties>
+        <hostname>${env.COMPUTERNAME}</hostname>
+      </properties>
+    </profile>
+    <profile>
+      <id>unix</id>
+      <activation>
+        <os><family>unix</family></os>
+      </activation>
+      <properties>
+        <hostname>${env.HOSTNAME}</hostname>
+      </properties>
+    </profile>
+  </profiles>
+
 </project>
