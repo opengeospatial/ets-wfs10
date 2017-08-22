@@ -1,6 +1,12 @@
 WFS 1.0.0 Test Suite Release Notes
 ==================================
 
+1.12 (2017-08-22)
+------------------
+- [#2](https://github.com/opengeospatial/ets-wfs10/issues/2) - Multiple namespaces can be problematic
+- [#9](https://github.com/opengeospatial/ets-wfs10/issues/9) - No Rest API
+- [#12](https://github.com/opengeospatial/ets-wfs10/issues/12) - test1.0.0-lock-getfeaturewithlock-releaseaction-10 fails with XSLT error
+
 1.11 (2016-02-23)
 ------------------
 - [#3](https://github.com/opengeospatial/ets-wfs10/issues/3) - gml:description and gml:name must be optional 
