@@ -318,7 +318,7 @@
       </code>
    </test>
 
-  <test name="wfs:getcapabilities-main">
+  <test name="wfs:getcapabilities-main" isConformanceClass="true" isBasic="true">
     <param name="getcapabilitiespost" />
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_GET_URL" />
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL" />
@@ -393,7 +393,7 @@
     </code>
   </test>
 
-  <test name="wfs:describefeaturetype-main">
+  <test name="wfs:describefeaturetype-main" isConformanceClass="true" isBasic="true">
     <param name="describefeaturetypeget"/>
     <param name="describefeaturetypepost"/>
     <param name="multiplenamenspaces"/>
@@ -492,7 +492,7 @@
     </code>
   </test>
 
-  <test name="wfs:getfeature-main">
+  <test name="wfs:getfeature-main" isConformanceClass="true" isBasic="true">
     <param name="getfeatureget"/>
     <param name="getfeaturepost"/>
     <param name="complexvalue"/>
@@ -663,7 +663,7 @@
     </code>
   </test>
 
-  <test name="wfs:getfeature-filter-comparisonoperators-main">
+  <test name="wfs:getfeature-filter-comparisonoperators-main" isConformanceClass="true" isBasic="true">
     <param name="getfeatureget"/>
     <param name="getfeaturepost"/>
     <param name="comparison"/>
@@ -897,7 +897,7 @@
     </code>
   </test>
 
-  <test name="wfs:getfeature-filter-spatialoperators-main">
+  <test name="wfs:getfeature-filter-spatialoperators-main" isConformanceClass="true" isBasic="true">
     <param name="getfeatureget" />
     <param name="getfeaturepost" />
     <param name="bbox" />
@@ -2070,7 +2070,7 @@
     </code>
   </test>
 
-  <test name="wfs:locking-main">
+  <test name="wfs:locking-main" isConformanceClass="true" isBasic="false">
     <param name="lockfeature"/>
     <param name="getfeaturewithlock"/>
     <param name="getcapabilitiespost"/>
@@ -2486,7 +2486,7 @@
     </code>
   </test>
 
-  <test name="wfs:transaction-main">
+  <test name="wfs:transaction-main" isConformanceClass="true" isBasic="false">
     <param name="transactional"/>
     <param name="getcapabilitiespost"/>
     <param name="getfeaturepost"/>
