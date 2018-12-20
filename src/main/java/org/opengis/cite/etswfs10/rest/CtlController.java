@@ -16,6 +16,8 @@ import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Source;
+
+import org.apache.commons.io.FilenameUtils;
 import org.w3c.dom.Document;
 
 /**
@@ -58,7 +60,7 @@ public class CtlController implements TestSuiteController {
     public static void main(String[] args) throws Exception {
         File propsFile;
         if (args.length == 0) {
-            propsFile = new File(System.getProperty("user.home"), "test-run-props.xml");
+            propsFile = new File(FilenameUtils.normalize(System.getProperty("user.home")), "test-run-props.xml");
         } else {
             String xmlProps = args[0];
             propsFile = (xmlProps.startsWith("file:"))
