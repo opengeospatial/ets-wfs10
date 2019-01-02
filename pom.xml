@@ -176,7 +176,6 @@
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
             </manifest>
             <manifestEntries>
-              <Build-Host>${hostname}</Build-Host>
               <Build-Time>${maven.build.timestamp}</Build-Time>
               <Build-Revision>${buildNumber}</Build-Revision>
             </manifestEntries>
@@ -209,26 +208,5 @@
       </testResource>
     </testResources>
   </build>
-
-  <profiles>
-    <profile>
-      <id>windows</id>
-      <activation>
-        <os><family>windows</family></os>
-      </activation>
-      <properties>
-        <hostname>${env.COMPUTERNAME}</hostname>
-      </properties>
-    </profile>
-    <profile>
-      <id>unix</id>
-      <activation>
-        <os><family>unix</family></os>
-      </activation>
-      <properties>
-        <hostname>${env.HOSTNAME}</hostname>
-      </properties>
-    </profile>
-  </profiles>
 
 </project>
