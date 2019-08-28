@@ -176,7 +176,6 @@
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
             </manifest>
             <manifestEntries>
-              <Build-Host>${hostname}</Build-Host>
               <Build-Time>${maven.build.timestamp}</Build-Time>
               <Build-Revision>${buildNumber}</Build-Revision>
             </manifestEntries>
@@ -338,5 +337,4 @@
       </properties>
     </profile>
   </profiles>
-
 </project>
