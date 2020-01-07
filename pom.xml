@@ -36,17 +36,17 @@
   </issueManagement>
 
   <properties>
-    <ets-code>wfs</ets-code>
+    <ets-code>wfs10</ets-code>
     <spec-version>1.0.0</spec-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <teamengine.version>5.4</teamengine.version>
     <soapui.test.fail.ignore>false</soapui.test.fail.ignore>
     <soapui.teamengine.endpoint>http://localhost:8081/teamengine</soapui.teamengine.endpoint>
     <soapui.iut>http://cite.deegree.org/deegree-webservices-3.4.5/services/wfs100?service=WFS&amp;request=GetCapabilities</soapui.iut>
     <soapui.tests.passed>447</soapui.tests.passed>
     <soapui.tests.skipped>0</soapui.tests.skipped>
     <soapui.tests.failed>0</soapui.tests.failed>
-    <teamengine.version>5.4</teamengine.version>
-  </properties>  
+  </properties>
 
   <reporting>
     <plugins>
