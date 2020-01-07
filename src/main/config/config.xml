@@ -16,9 +16,9 @@
       <revision>
         <name>${project.version}</name>
         <sources>
-          <source>wfs/${spec-version}/ctl/main.xml</source>
+          <source>${ets-code}/${spec-version}/ctl/main.xml</source>
         </sources>
-        <webdir>wfs/${spec-version}/site</webdir>
+        <webdir>${ets-code}/${spec-version}/site</webdir>
       </revision>
     </version>
   </standard>
