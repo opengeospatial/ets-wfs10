@@ -470,7 +470,7 @@ or it may propose rationale as to why a test is classified as untestable.
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The request will define the version number to be 1.0.0. The response document will be tested to check that the version number returned in the capabilities document is the same as the requested version.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The request will define the version number to be 1.0.0. The response document will be tested to check that the version number returned in the capabilities document is the same as the requested version.</td>
 </tr>
 </table>
 <br />
@@ -493,7 +493,7 @@ or it may propose rationale as to why a test is classified as untestable.
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The request will define the version number to be 99.99.99. The response document will be tested to check that the version number returned in the capabilities document is less than 99.99.99.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The request will define the version number to be 99.99.99. The response document will be tested to check that the version number returned in the capabilities document is less than 99.99.99.</td>
 </tr>
 </table>
 <br />
@@ -516,7 +516,7 @@ or it may propose rationale as to why a test is classified as untestable.
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The request will define the version number to be 0.99.99. The response document will be tested to check that the version number returned in the capabilities document is greater than 0.99.99.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The request will define the version number to be 0.99.99. The response document will be tested to check that the version number returned in the capabilities document is greater than 0.99.99.</td>
 </tr>
 </table>
 <br />
@@ -539,7 +539,7 @@ or it may propose rationale as to why a test is classified as untestable.
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The request will noy define a version number. The response document will be tested to check that the version number returned in the capabilities document is greater than 0.0.0 (i.e. a version number was specified).</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The request will noy define a version number. The response document will be tested to check that the version number returned in the capabilities document is greater than 0.0.0 (i.e. a version number was specified).</td>
 </tr>
 </table>
 <br />
@@ -562,7 +562,7 @@ or it may propose rationale as to why a test is classified as untestable.
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The response document will be tested to check that the capabilities document defines the capabilities requests GetCapabilities for HTTP GET, DescribeFeature for HTTP GET or POST and GetFeature for HTTP GET or POST. This test does not test that the capabilities advertised actually work, this is done in other tests.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The response document will be tested to check that the capabilities document defines the capabilities requests GetCapabilities for HTTP GET, DescribeFeature for HTTP GET or POST and GetFeature for HTTP GET or POST. This test does not test that the capabilities advertised actually work, this is done in other tests.</td>
 </tr>
 </table>
 <br />
@@ -585,7 +585,7 @@ or it may propose rationale as to why a test is classified as untestable.
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the DescribeFeatureType request has a SchemaDescriptionLanguage of XMLSCHEMA.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the DescribeFeatureType request has a SchemaDescriptionLanguage of XMLSCHEMA.</td>
 </tr>
 </table>
 <br />
@@ -608,7 +608,7 @@ or it may propose rationale as to why a test is classified as untestable.
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the GetFeature request has a ResultFormat of GML2.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the GetFeature request has a ResultFormat of GML2.</td>
 </tr>
 </table>
 <br />
@@ -631,7 +631,7 @@ or it may propose rationale as to why a test is classified as untestable.
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Query Operation.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Query Operation.</td>
 </tr>
 </table>
 </td></tr>
@@ -1950,7 +1950,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>The <Sub> element encodes the operation of subtraction where the second argument is subtracted from the first. The <Sub> element contains the argument when can be any expression that validates according to this specification.</td>
+<td>The element encodes the operation of subtraction where the second argument is subtracted from the first. The element contains the argument when can be any expression that validates according to this specification.</td>
 </tr>
 </table>
 <br />
@@ -2043,7 +2043,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>The <Sub> element encodes the operation of subtraction where the second argument is subtracted from the first. The <Sub> element contains the argument when can be any expression that validates according to this specification.</td>
+<td>The element encodes the operation of subtraction where the second argument is subtracted from the first. The element contains the argument when can be any expression that validates according to this specification.</td>
 </tr>
 </table>
 <br />
@@ -10122,7 +10122,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Scope:</b></td>
-<td>The Server supports WFS Transaction operations over HTTP POST.</td>
+<td>The Server supports WFS Transaction operations over HTTP GET.</td>
 </tr><tr>
 <td align="right" valign="top"><b>Text:</b></td>
 <td>When a wfs:GetCapabilities request is made to a transactional WFS, the response document must contain capabilities entries for the requests Transaction for HTTP POST. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.GetCapabilities">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section KVP.GetCapabilities</a>]</td>
@@ -10145,7 +10145,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Scope:</b></td>
-<td>The Server supports WFS Transaction operations over HTTP POST.</td>
+<td>The Server supports WFS Transaction operations over HTTP GET.</td>
 </tr><tr>
 <td align="right" valign="top"><b>Text:</b></td>
 <td>When a wfs:GetCapabilities request is made to a transactional WFS, the result document must define the Insert operation either globally or for at least one feature type. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.GetCapabilities">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section KVP.GetCapabilities</a>]</td>
@@ -10168,7 +10168,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Scope:</b></td>
-<td>The Server supports WFS Transaction operations over HTTP POST.</td>
+<td>The Server supports WFS Transaction operations over HTTP GET.</td>
 </tr><tr>
 <td align="right" valign="top"><b>Text:</b></td>
 <td>When a wfs:GetCapabilities request is made to a transactional WFS, the result document must define the Update operation either globally or for at least one feature type. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.GetCapabilities">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section KVP.GetCapabilities</a>]</td>
@@ -10191,7 +10191,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Scope:</b></td>
-<td>The Server supports WFS Transaction operations over HTTP POST.</td>
+<td>The Server supports WFS Transaction operations over HTTP GET.</td>
 </tr><tr>
 <td align="right" valign="top"><b>Text:</b></td>
 <td>When a wfs:GetCapabilities request is made to a transactional WFS, the result document must define the Delete operation either globally or for at least one feature type. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.GetCapabilities">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section KVP.GetCapabilities</a>]</td>
@@ -10222,7 +10222,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The response document will be tested to check that it defines the capabilities requests for Transaction for HTTP POST.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The response document will be tested to check that it defines the capabilities requests for Transaction for HTTP POST.</td>
 </tr>
 </table>
 <br />
@@ -10245,7 +10245,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Insert Operation.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Insert Operation.</td>
 </tr>
 </table>
 <br />
@@ -10268,7 +10268,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Update Operation.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Update Operation.</td>
 </tr>
 </table>
 <br />
@@ -10291,7 +10291,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Delete Operation.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Delete Operation.</td>
 </tr>
 </table>
 </td></tr>
@@ -10522,7 +10522,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Scope:</b></td>
-<td>The Server supports WFS LockFeature and GetFeatureWithLock operations over HTTP POST.</td>
+<td>The Server supports WFS LockFeature and GetFeatureWithLock operations over HTTP GET.</td>
 </tr><tr>
 <td align="right" valign="top"><b>Text:</b></td>
 <td>When a wfs:GetCapabilities request is made to a locking WFS, the response document must contain capabilities entries for the requests LockFeature or GetFeatureWithLock for HTTP POST. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.GetCapabilities">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section KVP.GetCapabilities</a>]</td>
@@ -10545,7 +10545,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Scope:</b></td>
-<td>The Server supports WFS LockFeature and GetFeatureWithLock operations over HTTP POST.</td>
+<td>The Server supports WFS LockFeature and GetFeatureWithLock operations over HTTP GET.</td>
 </tr><tr>
 <td align="right" valign="top"><b>Text:</b></td>
 <td>When a wfs:GetCapabilities request is made to a locking WFS, the result document must define the Lock operation either globally or for at least one feature type. [<a target="otherwindow" href="OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#KVP.GetCapabilities">OpenGISB. Web Feature Service Implementation Specification 1.0.0 section KVP.GetCapabilities</a>]</td>
@@ -10576,7 +10576,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The response document will be tested to check that it defines the capabilities requests for LockFeature or GetFeatureWithLock for HTTP POST.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The response document will be tested to check that it defines the capabilities requests for LockFeature or GetFeatureWithLock for HTTP POST.</td>
 </tr>
 </table>
 <br />
@@ -10599,7 +10599,7 @@ The first step of a relative location path may correspond to the root element of
 </tr>
 <tr>
 <td align="right" valign="top"><b>Note:</b></td>
-<td>This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Lock Operation.</td>
+<td>This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Lock Operation.</td>
 </tr>
 </table>
 </td></tr>
