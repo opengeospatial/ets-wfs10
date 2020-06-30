@@ -21,5 +21,8 @@ RUN cd /root/ && unzip -q ets-wfs10-*-ctl.zip -d /root/te_base/scripts
 ADD maven/ets-wfs10-*-deps.zip /root/
 RUN cd /root/ && unzip -q -o ets-wfs10-*-deps.zip -d /usr/local/tomcat/webapps/teamengine/WEB-INF/lib
 
+RUN cd /usr/local/tomcat/webapps/teamengine/WEB-INF/lib && cp xercesImpl*.jar -d /usr/local/tomcat/lib && rm -rf xercesImpl*.jar
+RUN cd /usr/local/tomcat/webapps/teamengine/WEB-INF/lib && cp xml-apis*.jar -d /usr/local/tomcat/lib && rm -rf xml-apis*.jar
+
 # run tomcat
 CMD ["catalina.sh", "run"]
