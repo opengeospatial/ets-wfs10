@@ -39,7 +39,7 @@
     <ets-code>wfs10</ets-code>
     <spec-version>1.0.0</spec-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <teamengine.version>5.4</teamengine.version>
+    <teamengine.version>5.4.1</teamengine.version>
     <soapui.test.fail.ignore>false</soapui.test.fail.ignore>
     <soapui.teamengine.endpoint>http://localhost:8081/teamengine</soapui.teamengine.endpoint>
     <soapui.iut>http://cite.deegree.org/deegree-webservices-3.4.5/services/wfs100?service=WFS&amp;request=GetCapabilities</soapui.iut>
