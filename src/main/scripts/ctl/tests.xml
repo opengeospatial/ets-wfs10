@@ -894,7 +894,7 @@
   <test name="wfs:test1.0.0-basic-getcapabilities-post-1">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made for a version number that the server supports, the result document must be a wfs:WFS_Capabilities with the version number equal to the version number in the request.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The request will define the version number to be 1.0.0. The response document will be tested to check that the version number returned in the capabilities document is the same as the requested version.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The request will define the version number to be 1.0.0. The response document will be tested to check that the version number returned in the capabilities document is the same as the requested version.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -926,7 +926,7 @@
   <test name="wfs:test1.0.0-basic-getcapabilities-post-2">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made for a version number that is greater than the version the server supports, the result document must be a wfs:WFS_Capabilities with the version number equal to the highest version number that the server supports which is less than the requested version number.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The request will define the version number to be 99.99.99. The response document will be tested to check that the version number returned in the capabilities document is less than 99.99.99.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The request will define the version number to be 99.99.99. The response document will be tested to check that the version number returned in the capabilities document is less than 99.99.99.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -954,7 +954,7 @@
   <test name="wfs:test1.0.0-basic-getcapabilities-post-3">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made for a version number that is less than the version the server supports, the result document must be a wfs:WFS_Capabilities with the version number equal to the lowest version number that the server supports which is greater than the requested version number.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The request will define the version number to be 0.99.99. The response document will be tested to check that the version number returned in the capabilities document is greater than 0.99.99.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The request will define the version number to be 0.99.99. The response document will be tested to check that the version number returned in the capabilities document is greater than 0.99.99.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -982,7 +982,7 @@
   <test name="wfs:test1.0.0-basic-getcapabilities-post-4">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made without specifying a version number, the result document must be a wfs:WFS_Capabilities with the version number equal to the highest version number that it supports.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The request will noy define a version number. The response document will be tested to check that the version number returned in the capabilities document is greater than 0.0.0 (i.e. a version number was specified).]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The request will noy define a version number. The response document will be tested to check that the version number returned in the capabilities document is greater than 0.0.0 (i.e. a version number was specified).]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -1009,7 +1009,7 @@
   <test name="wfs:test1.0.0-basic-getcapabilities-post-5">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a GetCapabilities request is made against basic WFS, the reponse cabilities document must define capabilities entries for the request GetCapabilities for HTTP GET, DescribeFeatureType for HTTP GET or POST and GetFeature for HTTP GET or POST.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The response document will be tested to check that the capabilities document defines the capabilities requests GetCapabilities for HTTP GET, DescribeFeature for HTTP GET or POST and GetFeature for HTTP GET or POST. This test does not test that the capabilities advertised actually work, this is done in other tests.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The response document will be tested to check that the capabilities document defines the capabilities requests GetCapabilities for HTTP GET, DescribeFeature for HTTP GET or POST and GetFeature for HTTP GET or POST. This test does not test that the capabilities advertised actually work, this is done in other tests.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -1053,7 +1053,7 @@
   <test name="wfs:test1.0.0-basic-getcapabilities-post-6">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made, the result document must contain a schema description language of XMLSCHEMA for DescribeFeatureType.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the DescribeFeatureType request has a SchemaDescriptionLanguage of XMLSCHEMA.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the DescribeFeatureType request has a SchemaDescriptionLanguage of XMLSCHEMA.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -1085,7 +1085,7 @@
   <test name="wfs:test1.0.0-basic-getcapabilities-post-7">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made, the result document must contain a result format of GML2 for GetFeature.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the GetFeature request has a ResultFormat of GML2.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the GetFeature request has a ResultFormat of GML2.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -1117,7 +1117,7 @@
   <test name="wfs:test1.0.0-basic-getcapabilities-post-8">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made to a basic WFS, the result document must define the Query operation either globally or for at least one feature type.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Query Operation.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Query Operation.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -14966,7 +14966,7 @@ The first step of a relative location path may correspond to the root element of
   <test name="wfs:test1.0.0-lock-getcapabilities-post-1">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made to a locking WFS, the response document must contain capabilities entries for the requests LockFeature or GetFeatureWithLock for HTTP POST.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The response document will be tested to check that it defines the capabilities requests for LockFeature or GetFeatureWithLock for HTTP POST.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The response document will be tested to check that it defines the capabilities requests for LockFeature or GetFeatureWithLock for HTTP POST.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -15000,7 +15000,7 @@ The first step of a relative location path may correspond to the root element of
   <test name="wfs:test1.0.0-lock-getcapabilities-post-2">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made to a locking WFS, the result document must define the Lock operation either globally or for at least one feature type.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Lock Operation.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Lock Operation.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -21416,7 +21416,7 @@ The first step of a relative location path may correspond to the root element of
   <test name="wfs:test1.0.0-transactional-getcapabilities-post-1">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made to a transactional WFS, the response document must contain capabilities entries for the requests Transaction for HTTP POST.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test. The response document will be tested to check that it defines the capabilities requests for Transaction for HTTP POST.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test. The response document will be tested to check that it defines the capabilities requests for Transaction for HTTP POST.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -21448,7 +21448,7 @@ The first step of a relative location path may correspond to the root element of
   <test name="wfs:test1.0.0-transactional-getcapabilities-post-2">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made to a transactional WFS, the result document must define the Insert operation either globally or for at least one feature type.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Insert Operation.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Insert Operation.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -21482,7 +21482,7 @@ The first step of a relative location path may correspond to the root element of
   <test name="wfs:test1.0.0-transactional-getcapabilities-post-3">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made to a transactional WFS, the result document must define the Update operation either globally or for at least one feature type.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Update Operation.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Update Operation.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
@@ -21516,7 +21516,7 @@ The first step of a relative location path may correspond to the root element of
   <test name="wfs:test1.0.0-transactional-getcapabilities-post-4">
     <param name="VAR_WFS_GET_CAPABILITIES_HTTP_POST_URL"/>
     <assertion>When a wfs:GetCapabilities request is made to a transactional WFS, the result document must define the Delete operation either globally or for at least one feature type.</assertion>
-    <comment><![CDATA[This test issues a GetCapabilities request using HTTP GET to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Delete Operation.]]></comment>
+    <comment><![CDATA[This test issues a GetCapabilities request using HTTP POST to the WFS server under test.The response document will be tested to check that the global FeatureTypeList or at least one FeatureType defines the Delete Operation.]]></comment>
     <ctl:link title="OGC 02-058">http://cite.opengeospatial.org/OGCTestData/wfs/1.0.0/specs/wfs/1.0.0/02-058.html#GetCapabilities</ctl:link>
     <code>
       <xsl:variable name="request1">
