@@ -1,6 +1,19 @@
 WFS 1.0.0 Test Suite Release Notes
 ==================================
 
+1.13 (2021-09-08)
+------------------
+- [#33](https://github.com/opengeospatial/ets-wfs10/pull/33) - Set teamengine.version to 5.4.1
+- [#27](https://github.com/opengeospatial/ets-wfs10/issues/27) - Description of tests mixes GET and POST
+- [#29](https://github.com/opengeospatial/ets-wfs10/issues/29) - Add template to get an XML/JSON response via rest endpoint
+- [#31](https://github.com/opengeospatial/ets-wfs10/pull/31) - Added header for soapui test.
+- [#19](https://github.com/opengeospatial/ets-wfs10/issues/19) - Introduce Dockerfile and Maven Docker plugin
+- [#22](https://github.com/opengeospatial/ets-wfs10/issues/22) - Create SoapUI tests and integrate them into Maven and Jenkinsfile
+- [#23](https://github.com/opengeospatial/ets-wfs10/issues/23) - Fix REST path
+- [#20](https://github.com/opengeospatial/ets-wfs10/issues/20) - Remove empty Build-Host from MANIFEST (clean up pom.xml)
+- [#18](https://github.com/opengeospatial/ets-wfs10/pull/18) - Fixed Fortify Issue for DISASTIG
+- [#10](https://github.com/opengeospatial/ets-wfs10/issues/10) - Update CTL with better information about conformance classes
+
 1.12 (2017-08-22)
 ------------------
 - [#2](https://github.com/opengeospatial/ets-wfs10/issues/2) - Multiple namespaces can be problematic
