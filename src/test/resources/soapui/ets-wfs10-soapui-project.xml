@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="1476c0be-8f92-4fc1-9925-9543b4950036" activeEnvironment="Default" name="TEAM Engine" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="1476c0be-8f92-4fc1-9925-9543b4950036" activeEnvironment="Default" name="TEAM Engine" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:testSuite id="c6ce07d7-2e98-4b79-8b92-044b2687a974" name="WFS 1.0">
     <con:settings/>
@@ -13,7 +13,7 @@
         <con:config method="GET" xsi:type="con:HttpRequest" id="c00ebb3d-78bd-4029-aaf3-0eb17f2df8f1" name="REST interface available" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/xhtml+xml" xmlns="http://eviware.com/soapui/config"/></con:setting>            
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/xhtml+xml" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
           <con:endpoint>${#Project#teamengine.endpoint}/rest/suites</con:endpoint>
           <con:request/>
@@ -52,7 +52,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           </con:settings>
-          <con:endpoint>${#Project#teamengine.endpoint}/rest/suites/wfs/</con:endpoint>
+          <con:endpoint>${#Project#teamengine.endpoint}/rest/suites/wfs10/</con:endpoint>
           <con:request/>
           <con:assertion type="Valid HTTP Status Codes" id="0b7f5046-5ac7-41d0-829e-17315ac969ba" name="Valid HTTP Status Codes">
             <con:settings/>
@@ -82,7 +82,7 @@
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/xml" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>${#Project#teamengine.endpoint}/rest/suites/wfs/run</con:endpoint>
+          <con:endpoint>${#Project#teamengine.endpoint}/rest/suites/wfs10/run</con:endpoint>
           <con:request/>
           <con:assertion type="Valid HTTP Status Codes" id="0b7f5046-5ac7-41d0-829e-17315ac969ba" name="Valid HTTP Status Codes">
             <con:settings/>
@@ -126,7 +126,7 @@ assert headers != null &amp;&amp; headers[0] != null &amp;&amp; headers[0].index
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/zip" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>${#Project#teamengine.endpoint}/rest/suites/wfs/run</con:endpoint>
+          <con:endpoint>${#Project#teamengine.endpoint}/rest/suites/wfs10/run</con:endpoint>
           <con:request/>
           <con:assertion type="Valid HTTP Status Codes" id="0b7f5046-5ac7-41d0-829e-17315ac969ba" name="Valid HTTP Status Codes">
             <con:settings/>
@@ -170,7 +170,7 @@ assert headers != null &amp;&amp; headers[0] != null &amp;&amp; headers[0].index
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/rdf+xml" xmlns="http://eviware.com/soapui/config"/></con:setting>
           </con:settings>
-          <con:endpoint>${#Project#teamengine.endpoint}/rest/suites/wfs/run</con:endpoint>
+          <con:endpoint>${#Project#teamengine.endpoint}/rest/suites/wfs10/run</con:endpoint>
           <con:request/>
           <con:assertion type="Valid HTTP Status Codes" id="0b7f5046-5ac7-41d0-829e-17315ac969ba" name="Valid HTTP Status Codes">
             <con:settings/>
@@ -263,11 +263,11 @@ declare namespace cite="http://cite.opengeospatial.org/";
     </con:property>
     <con:property>
       <con:name>iut</con:name>
-      <con:value>http://cite.deegree.org/deegree-webservices-3.4.5/services/wfs100?service=WFS&amp;request=GetCapabilities</con:value>
+      <con:value>http://cite.deegree.org/deegree-webservices-3.4.16/services/wfs100?service=WFS&amp;request=GetCapabilities</con:value>
     </con:property>
     <con:property>
       <con:name>tests.passed</con:name>
-      <con:value>447</con:value>
+      <con:value>451</con:value>
     </con:property>
     <con:property>
       <con:name>tests.skipped</con:name>
@@ -275,7 +275,7 @@ declare namespace cite="http://cite.opengeospatial.org/";
     </con:property>
     <con:property>
       <con:name>tests.failed</con:name>
-      <con:value>0</con:value>
+      <con:value>6</con:value>
     </con:property>
   </con:properties>
   <con:wssContainer/>
