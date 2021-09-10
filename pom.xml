@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>ets-wfs10</artifactId>
   <groupId>org.opengis.cite</groupId>
-  <version>1.13</version>
+  <version>1.14-SNAPSHOT</version>
 
   <name>Conformance Test Suite - OGC Web Feature Service 1.0.0</name>
   <description>Verifies conformance of implementations to OGC Web Feature Service 1.0.0.</description>
@@ -26,7 +26,7 @@
     <url>https://github.com/opengeospatial/ets-wfs10</url>    
     <connection>scm:git:https://github.com/opengeospatial/ets-wfs10.git</connection>    
     <developerConnection>scm:git:git@github.com:opengeospatial/ets-wfs10.git</developerConnection>
-    <tag>1.13</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
