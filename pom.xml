@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <parent>
     <groupId>org.opengis.cite</groupId>
@@ -10,7 +9,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <artifactId>ets-wfs10</artifactId>
-  <version>1.14-SNAPSHOT</version>
+  <version>1.14</version>
 
   <name>Conformance Test Suite - OGC Web Feature Service 1.0.0</name>
   <description>Verifies conformance of implementations to OGC Web Feature Service 1.0.0.</description>
@@ -32,7 +31,7 @@
     <url>https://github.com/opengeospatial/ets-wfs10</url>
     <connection>scm:git:https://github.com/opengeospatial/ets-wfs10.git</connection>
     <developerConnection>scm:git:git@github.com:opengeospatial/ets-wfs10.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>1.14</tag>
   </scm>
 
   <issueManagement>
