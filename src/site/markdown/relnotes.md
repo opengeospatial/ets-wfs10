@@ -1,6 +1,16 @@
 WFS 1.0.0 Test Suite Release Notes
 ==================================
 
+1.14 (2025-03-05)
+------------------
+
+Attention: Java 17 and Tomcat 10.1 are required.
+
+- [#39](https://github.com/opengeospatial/ets-wfs10/issues/39) - Migrate test suite to TEAM Engine 6 (Java 17)
+- [#36](https://github.com/opengeospatial/ets-wfs10/pull/36) - Remove obsolete SoapUI tests
+- [#35](https://github.com/opengeospatial/ets-wfs10/pull/35) - Add credentials to SoapUI project
+- [#32](https://github.com/opengeospatial/ets-wfs10/pull/32) - Bump commons-io from 2.5 to 2.7
+
 1.13 (2021-09-08)
 ------------------
 - [#33](https://github.com/opengeospatial/ets-wfs10/pull/33) - Set teamengine.version to 5.4.1
